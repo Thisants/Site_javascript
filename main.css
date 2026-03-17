@@ -1,47 +1,134 @@
+/* estilos básicos e transição */
+/* RESET BÁSICO */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+
 body{
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height:1.6;
+    padding:40px;
+    transition: background 0.4s, color 0.4s;
 }
-ul{
-    list-style-type: none;
-    padding: 0;
-}
-li{
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}.list{
-    max-width: 600px;
-    margin: 0 auto;
-}#msg{
-    color: #333;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 20px;
-}
-.light-theme{
-    --bg:var(--Purple)
-    --fontColor: var(--white);  
-    --btnBg: var(--black);
-    --BtnFontColor: var(--white);
-}
+
+/* DARK THEME (tema café) */
+
 .dark-theme{
-    --bg:var(--Purple)
-    --fontColor: var(--black);  
-    --btnBg: var(--white);
-    --BtnFontColor: var(--black);
+    background: linear-gradient(135deg,#2c1810,#3e2723,#1b0f0a);
+    color:#f5e6d3;
 }
+
+/* LIGHT THEME (tema creme/caramelo) */
+
+.light-theme{
+    background: linear-gradient(135deg,#fff7e6,#ffe4b5,#ffd6a5);
+    color:#4a2c2a;
+}
+
+/* HEADER */
+
+header{
+    margin-bottom:30px;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+h2{
+    font-weight:400;
+    opacity:0.9;
+}
+
+/* BOTÃO */
+
 .btn{
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
+    margin-top:15px;
+    padding:10px 18px;
+    border:none;
+    border-radius:8px;
+    font-size:14px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+/* botão no dark */
+
+.dark-theme .btn{
+    background:#ffb347;
+    color:#2c1810;
+}
+
+.dark-theme .btn:hover{
+    background:#ffc870;
+    transform:scale(1.05);
+}
+
+/* botão no light */
+
+.light-theme .btn{
+    background:#6f4e37;
+    color:white;
+}
+
+.light-theme .btn:hover{
+    background:#8b5e3c;
+    transform:scale(1.05);
+}
+
+/* SEÇÕES */
+
+section{
+    margin-bottom:30px;
+}
+
+/* LISTA */
+
+ul{
+    margin-top:15px;
+    padding-left:20px;
+}
+
+li{
+    margin-bottom:8px;
+    font-size:1.05rem;
+    transition: transform 0.2s;
+}
+
+li:hover{
+    transform:translateX(5px);
+}
+
+/* CARD VISUAL PARA TEXTO */
+
+section p{
+    max-width:700px;
+    padding:15px;
+    border-radius:10px;
+}
+
+/* cards dark */
+
+.dark-theme section p{
+    background:rgba(255,255,255,0.05);
+}
+
+/* cards light */
+
+.light-theme section p{
+    background:rgba(255,255,255,0.6);
+}
+
+/* TÍTULO DE CATEGORIA */
+
+h3{
+    margin-top:20px;
+    font-size:1.4rem;
 }
